@@ -1,0 +1,41 @@
+<aura:component >
+	<ltng:require styles="{!$Resource.daterangepicker + '/daterangepicker.css'}"
+                  scripts="{!join(',', 
+                           	$Resource.jQuery,
+                           	$Resource.daterangepicker + '/moment.min.js',
+                           	$Resource.daterangepicker + '/daterangepicker.js'
+                           	
+                           )}"
+                  afterScriptsLoaded="{!c.configureDateRangePicker}"/>
+
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="dateRangePicker">Date Range Picker</label>
+        <div class="slds-form-element__control">
+            <lightning:icon iconName="utility:event"/>
+            <input type="text" class="slds-input" id="dateRangePicker"/>
+
+            <input id="dateRangePickerStartDate" class="slds-hide"/>
+            <input id="dateRangePickerEndDate" class="slds-hide"/>
+        </div>
+    </div>
+	
+    <lightning:button variant="brand" label="Brand action" title="Brand action" onclick="{! c.getDates }" />
+    
+    <aura:html tag="style">
+        .daterangepicker td.disabled{
+			text-decoration: initial;
+			cursor: default;
+		}
+		.daterangepicker{
+        	border: 1px solid #d4d4d4;
+        	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+		}
+        .daterangepicker .calendar-table th{
+			cursor: default;
+		}
+        .daterangepicker .calendar-table th.available{
+			cursor: pointer;
+		}
+
+    </aura:html>
+</aura:component>

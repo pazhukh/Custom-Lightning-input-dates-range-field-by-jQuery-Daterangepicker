@@ -1,0 +1,18 @@
+.THIS .slds-icon-utility-event{
+    position: absolute;
+    right: .7rem;
+    top: 50%;
+    margin-top: -.4375rem;
+    line-height: 1;
+    border: 0;
+    z-index: 2;
+    fill: rgb(171, 173, 176);
+    pointer-events: none;
+}
+.THIS .slds-icon{
+    width: .875rem;
+    height: .875rem;
+}
+.THIS #datepicker{
+    padding: 0 2rem 0 .75rem;
+}
